@@ -1,0 +1,14 @@
+# Wordle Project created by Pranav Anand on December 28 2023
+# This project was inspired by the Wordle website and uses font awesome for icons.
+
+#### Description
+This project is a game where the user has 6 tries to guess a 5 letter word. If the user guesses the right word then game will end and 
+the user will be given the word and option to play again. If the user is unable to give the right answer on the 6 tries then the user
+will be given the correct word and option to play again. This game not only is fun but will help you gain knowledge of new words.
+The users also has option to read the help menue incase they are confused on how to play and dark/light mode depending on their choice.
+This project also uses arrays to to store the word in the correct tile and after submit if it is at right spot they will be given green
+tile. If it is in the word but not correct spot then a yellow tile and if it is worng then a gray tile. We add the colors of the tile 
+by DOM manipulation by adding classes. 
+
+Thank you.
+

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Wordle 2.0</title>
+    
+</head>
+<body>
+
+        <!--Start of header-->
+    <header class="head">
+        <h1 id = "title2" class="title">Wordle 2.0 </h1>
+        <menu class="menu">
+            <a id = "iconHelp" class="iconsQ"><i class="fa-regular fa-circle-question fa-2xl"></i></a>
+            <a !autofocus id = "iconBright" class="iconsB"><i class="fa-solid fa-moon fa-2xl"></i></a>
+        </menu>
+    </header>
+    <hr>
+        <!--end of header-->
+        <div id="alert" hidden>
+            <p class="message">Please enter a 5 letter word.</p>
+        </div>
+    <!--start of board-->
+    <main class = "mainContainInfo">
+        <div class="mainInfo">
+            <div class="wordleBox">
+                <div class="mainTile" id = "LettersColor">
+                    <p class="mainLetter" id = "0-0">
+                    
+                    </p>
+                </div>
+                <div class="mainTile" id = "LettersColor">
+                    <p class="mainLetter" id="0-1">
+                    
+                    </p>
+                </div>
+                <div class="mainTile">
+                    <p class="mainLetter" id="0-2">
+                        
+                    </p>
+                </div>
+                <div class="mainTile">
+                    <p class="mainLetter" id="0-3">
+                        
+                    </p>
+                </div>
+                <div class="mainTile">
+                    <p class="mainLetter" id="0-4">
+                        
+                    </p>
+                </div>
+              </div>
+              <div class="wordleBox">
+                <div class="mainTile">
+                    <p class="mainLetter" id = "1-0">
+                        
+                    </p>
+                </div>
+                <div class="mainTile">
+                    <p class="mainLetter" id = "1-1">
+                    
+                    </p>
+                </div>
+                <div class="mainTile">
+                    <p class="mainLetter" id = "1-2">
+                        
+                    </p>
+                </div>
+                <div class="mainTile">
+                    <p class="mainLetter" id = "1-3">
+                        
+                    </p>
+                </div>
+                <div class="mainTile">
+                    <p class="mainLetter" id = "1-4">
+                        
+                    </p>
+                </div>
+              </div>
+              <div class="wordleBox">
+                <div class="mainTile">
+                    <p class="mainLetter" id = "2-0">
+                        
+                    </p>
+                </div>
+                <div class="mainTile">
+                    <p class="mainLetter" id = "2-1">
+                    
+                    </p>
+                </div>
+                <div class="mainTile">
+                    <p class="mainLetter" id = "2-2">
+                        
+                    </p>
+                </div>
+                <div class="mainTile">
+                    <p class="mainLetter" id = "2-3"> 
+                        
+                    </p>
+                </div>
+                <div class="mainTile">
+                    <p class="mainLetter" id = "2-4">
+                        
+                    </p>
+                </div>
+              </div>
+              <div class="wordleBox">
+                <div class="mainTile">
+                    <p class="mainLetter" id = "3-0">
+                        
+                    </p>
+                </div>
+                <div class="mainTile">
+                    <p class="mainLetter" id = "3-1">
+                    
+                    </p>
+                </div>
+                <div class="mainTile">
+                    <p class="mainLetter" id = "3-2">
+                        
+                    </p>
+                </div>
+                <div class="mainTile">
+                    <p class="mainLetter" id = "3-3">
+                        
+                    </p>
+                </div>
+                <div class="mainTile">
+                    <p class="mainLetter" id = "3-4">
+                        
+                    </p>
+                </div>
+              </div>
+              <div class="wordleBox">
+                <div class="mainTile">
+                    <p class="mainLetter" id = "4-0">
+                        
+                    </p>
+                </div>
+                <div class="mainTile">
+                    <p class="mainLetter" id = "4-1">
+                    
+                    </p>
+                </div>
+                <div class="mainTile">
+                    <p class="mainLetter" id = "4-2">
+                        
+                    </p>
+                </div>
+                <div class="mainTile">
+                    <p class="mainLetter" id = "4-3">
+                        
+                    </p>
+                </div>
+                <div class="mainTile">
+                    <p class="mainLetter" id = "4-4">
+                        
+                    </p>
+                </div>
+              </div>
+              <div class="wordleBox">
+                <div class="mainTile">
+                    <p class="mainLetter" id = "5-0">
+                        
+                    </p>
+                </div>
+                <div class="mainTile">
+                    <p class="mainLetter" id = "5-1">
+                    
+                    </p>
+                </div>
+                <div class="mainTile">
+                    <p class="mainLetter" id = "5-2">
+                        
+                    </p>
+                </div>
+                <div class="mainTile">
+                    <p class="mainLetter" id = "5-3">
+                        
+                    </p>
+                </div>
+                <div class="mainTile">
+                    <p class="mainLetter" id = "5-4">
+                        
+                    </p>
+                </div>
+              </div>
+              <p id = "answer" class = "mainLetterG" hidden></p>
+              <button id = "again" class = "mainButtonG" hidden>Play Again?</button>
+            </div>
+            <div class="keyboard">
+                <div class = "firstBox" id = "firstBox">
+                    <div class="keyboardTile" id = "KeyQ"><p>Q</p></div>
+                    <div class="keyboardTile" id = "KeyW"><p>W</p></div>
+                    <div class="keyboardTile" id = "KeyE"><p>E</p></div>
+                    <div class="keyboardTile" id = "KeyR"><p>R</p></div>
+                    <div class="keyboardTile" id = "KeyT"><p>T</p></div>
+                    <div class="keyboardTile" id = "KeyY"><p>Y</p></div>
+                    <div class="keyboardTile" id = "KeyU"><p>U</p></div>
+                    <div class="keyboardTile" id = "KeyI"><p>I</p></div>
+                    <div class="keyboardTile" id = "KeyO"><p>O</p></div>
+                    <div class="keyboardTile" id = "KeyP"><p>P</p></div>
+                </div>
+                <div class = "secondBox" id = "secondBox">
+                    <div class="keyboardTile" id = "KeyA"><p>A</p></div>
+                    <div class="keyboardTile" id = "KeyS"><p>S</p></div>
+                    <div class="keyboardTile" id = "KeyD"><p>D</p></div>
+                    <div class="keyboardTile" id = "KeyF"><p>F</p></div>
+                    <div class="keyboardTile" id = "KeyG"><p>G</p></div>
+                    <div class="keyboardTile" id = "KeyH"><p>H</p></div>
+                    <div class="keyboardTile" id = "KeyJ"><p>J</p></div>
+                    <div class="keyboardTile" id = "KeyK"><p>K</p></div>
+                    <div class="keyboardTile" id = "KeyL"><p>L</p></div>
+                </div>
+                <div class = "thirdBox" id = "thirdBox">
+                    <div class="keyboardTile" id = "KeyZ"><p>Z</p></div>
+                    <div class="keyboardTile" id = "KeyX"><p>X</p></div>
+                    <div class="keyboardTile" id = "KeyC"><p>C</p></div>
+                    <div class="keyboardTile" id = "KeyV"><p>V</p></div>
+                    <div class="keyboardTile" id = "KeyB"><p>B</p></div>
+                    <div class="keyboardTile" id = "KeyN"><p>N</p></div>
+                    <div class="keyboardTile" id = "KeyM"><p>M</p></div>
+                    
+                </div>
+                
+              </div>
+    </main>
+    <!--Start of Help Popup-->
+    <div class="containInfo">
+        <div id = "infos" class="info" hidden>
+            <div>
+            <button id = "iconX" class="iconsX"><i class="fa-solid fa-x fa-2xl"></i></button>
+              <p>How To Play</p>
+              <p>Guess the Wordle in 6 tries</p>
+              <ul>
+                <li>Each guess must be a valid 5-letter word.</li>
+                <li>The color of the tiles will change to show how close your guess was to the word.</li>
+              </ul>
+              <p>Examples</p>
+              <div class="wordleBox">
+                <div class="greenTile">
+                    <p class="letter">
+                        W
+                    </p>
+                </div>
+                <div class="Tile">
+                    <p class="letter">
+                        E
+                    </p>
+                </div>
+                <div class="Tile">
+                    <p class="letter">
+                        A
+                    </p>
+                </div>
+                <div class="Tile">
+                    <p class="letter">
+                        R
+                    </p>
+                </div>
+                <div class="Tile">
+                    <p class="letter">
+                        Y
+                    </p>
+                </div>
+              </div>
+              <p><b>W</b> is in the word and in the correct spot.</p>
+              <div class="wordleBox">
+                <div class="Tile">
+                    <p class="letter">
+                        P
+                    </p>
+                </div>
+                <div class="yellowTile">
+                    <p class="letter">
+                        I
+                    </p>
+                </div>
+                <div class="Tile">
+                    <p class="letter">
+                        L
+                    </p>
+                </div>
+                <div class="Tile">
+                    <p class="letter">
+                        L
+                    </p>
+                </div>
+                <div class="Tile">
+                    <p class="letter">
+                        S
+                    </p>
+                </div>
+              </div>
+              <p><b>I</b> is in the word but in the wrong spot.</p>
+              <div class="wordleBox">
+                <div class="Tile">
+                    <p class="letter">
+                        V
+                    </p>
+                </div>
+                <div class="Tile">
+                    <p class="letter">
+                        A
+                    </p>
+                </div>
+                <div class="Tile">
+                    <p class="letter">
+                        G
+                    </p>
+                </div>
+                <div class="grayTile">
+                    <p class="letter">
+                        U
+                    </p>
+                </div>
+                <div class="Tile">
+                    <p class="letter">
+                        E
+                    </p>
+                </div>
+              </div>
+              <p><b>U</b> is Not in the word in any spots</p>
+              <hr>
+              <p>There is a new puzzle everytime. <b>GOOD LUCK</b></p>
+            </div>
+          </div>
+        </div>
+            <!--end of Help Popup-->
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/35ec404342.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
